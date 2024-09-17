@@ -1,21 +1,21 @@
 export interface ParticipantsProps {
-  participantA?: string;
-  participantB?: string;
+  participantA: string;
+  participantB: string;
 }
 
-export const Participants = ({ participantA, participantB}: ParticipantsProps) => {
+export const Participants = ({ participantA, participantB }: ParticipantsProps) => {
   return (
     <div className="participants">
-      <h2>
-        <img src="/logo.svg" className="logo" alt="FBG" />
-        {participantA}
-      </h2>
-      <div>at <hr />
+      <div className="team">
+        <h2>{participantA}</h2>
       </div>
-      <h2>
-        <img src="/logo.svg" className="logo" alt="FBG" />
-        {participantB}
-      </h2>
+      <div className="vs">
+        vs <hr />
+      </div>
+      <div className="team">
+        <h2>{participantB}</h2>
+      </div>
     </div>
   );
 };
+
